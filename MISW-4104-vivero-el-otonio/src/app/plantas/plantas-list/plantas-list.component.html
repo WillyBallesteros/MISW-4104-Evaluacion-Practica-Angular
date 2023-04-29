@@ -1,0 +1,20 @@
+<div>
+  <table class="table">
+    <thead class="table-dark">
+      <tr>
+        <th>#</th>
+        <th>Nombre común</th>
+        <th>Tipo</th>
+        <th>Clima</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let planta of plantas">
+        <td>{{ planta.id }}</td>
+        <td>{{ planta.nombre_comun }}</td>
+        <td>{{ planta.tipo }}</td>
+        <td>{{ planta.clima }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
