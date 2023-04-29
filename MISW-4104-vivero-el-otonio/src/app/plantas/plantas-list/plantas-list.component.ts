@@ -23,8 +23,6 @@ export class PlantasListComponent implements OnInit {
     });
   }
 
-
-
   ngOnInit() {
     this.getPlantas();
   }
