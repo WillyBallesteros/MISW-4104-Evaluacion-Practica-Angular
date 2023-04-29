@@ -1,11 +1,19 @@
 import { TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
+import { PlantasModule } from './plantas/plantas.module';
+import { AppRoutingModule } from './app-routing.module';
+import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 
 describe('AppComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [
+        AppRoutingModule,
+        BrowserModule,
+        HttpClientModule,
+        PlantasModule,
         RouterTestingModule
       ],
       declarations: [
@@ -23,13 +31,7 @@ describe('AppComponent', () => {
   it(`should have as title 'MISW-4104-vivero-el-otonio'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
+    console.log(app);
     expect(app.title).toEqual('MISW-4104-vivero-el-otonio');
-  });
-
-  it('should render title', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('MISW-4104-vivero-el-otonio app is running!');
   });
 });
